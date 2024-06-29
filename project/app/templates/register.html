@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body bgcolor="pink">
     <center>
-    <h1>Login Form</h1>
-    <form>
+    <h1 >Login Form</h1>
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br>
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname"><br>
-        <button>Submit</button>
+
+        
+        <label for="contactno">Contact:</label><br>
+        <input type="text" id="contactno" name="contactno"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <button type="submit">Register</button>
       </form></center>
 </body>
 </html>
